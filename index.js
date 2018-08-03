@@ -22,16 +22,16 @@ function nowServing(line){
 }
 
 function currentLine(line){
-  if(!line.length) {
+  if(line.length === 0) {
     return "The line is currently empty.";
   }
-  var lineNamesandNumbers = [];
+  var tempArray = [];
   
   for(var i=0; i<line.length; i++) {
-    lineNamesandNumbers.push(i+1 + ". "+ line[i]);
+    tempArray.push(i+1 + ". "+ line[i]);
   }
-  console.log("The line is currently: " + lineNamesandNumbers)
-  return "The line is currently: " + lineNamesandNumbers.join(', ');
+  console.log("The line is currently: " + tempArray)
+  return "The line is currently: " + tempArray.join(', ');
 }
   
 currentLine(katzDeli)
